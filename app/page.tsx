@@ -231,8 +231,8 @@ export default function Home() {
                 <div className="bg-blue-50 p-4 rounded-2xl text-blue-600 h-fit"><Clock size={28}/></div>
                 <div>
                   <h4 className="font-bold text-xl mb-2">Clinic Hours</h4>
-                  <p className="text-slate-500 text-lg font-medium">Monday – Sunday: 10:00 AM – 8:00 PM</p>
-                  <p className="text-teal-600 font-bold uppercase text-sm">Open 7 Days a Week</p>
+<p className="text-slate-500 text-lg font-medium">Monday – Sunday: 10:00 AM – 8:00 PM</p>
+<p className="text-teal-600 font-bold uppercase text-sm">Open 7 Days a Week</p>
                 </div>
               </div>
             </div>
