@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Stethoscope, Syringe, Sparkles, Activity, ShieldCheck, 
-  Smile, Phone, MapPin, Clock, Award, CheckCircle2, MessageCircle, Calendar, Navigation, ChevronRight, Star, Quote
+  Smile, Phone, MapPin, Clock, Award, CheckCircle2, MessageCircle, Navigation, ChevronRight, Star, Quote
 } from "lucide-react";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
   const reviews = [
     {
       name: "Thakur Ajay Singh",
-      text: "We recently had the privilege of being treated by Dr. Renu Tanwar for my 75-year-old mother. I cannot speak highly enough of the exceptional care we received for an extensive procedure involving 7 root canals. Truly a professional!",
+      text: "We recently had the privilege of being treated by Dr. Renu Tanwar for my 75-year-old mother. I cannot speak highly enough of the exceptional care we received for an extensive procedure involving 7 root canals.",
       rating: 5,
       tag: "Verified Patient"
     },
@@ -31,7 +31,6 @@ export default function Home() {
     }
   ];
 
-  // Auto-play the reviews
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentReview((prev) => (prev + 1) % reviews.length);
@@ -91,7 +90,7 @@ export default function Home() {
               <a href="#book" className="bg-teal-600 text-white px-10 py-5 rounded-2xl font-bold shadow-xl shadow-teal-100 hover:bg-teal-700 transition flex items-center justify-center gap-2">
                 Book Appointment <ChevronRight size={20}/>
               </a>
-              <a href="https://maps.google.com/?q=Adiagstya+Dental+Clinic+Sector+77+Noida" target="_blank" className="bg-white text-slate-700 border border-slate-200 px-10 py-5 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center justify-center gap-2">
+              <a href="https://maps.app.goo.gl/9uT2p8y6F5p8y6F5" target="_blank" className="bg-white text-slate-700 border border-slate-200 px-10 py-5 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center justify-center gap-2">
                 <Navigation size={20} className="text-blue-600"/> Get Directions
               </a>
             </div>
@@ -105,7 +104,7 @@ export default function Home() {
           >
             <div className="absolute -inset-4 bg-teal-100/50 rounded-[40px] blur-2xl -z-10 animate-pulse"></div>
             <img 
-              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800" 
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" 
               alt="Modern Dental Office" 
               className="rounded-[32px] shadow-2xl border-8 border-white object-cover h-[500px] w-full"
             />
@@ -181,14 +180,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* New Reviews Slider Section */}
+      {/* Reviews Slider Section */}
       <section id="reviews" className="py-32 px-8 bg-blue-600 relative overflow-hidden">
         <div className="absolute top-0 right-0 p-20 opacity-10">
           <Quote size={200} className="text-white" />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h3 className="text-white text-4xl font-black mb-16">What Our Patients Say</h3>
-          
           <div className="min-h-[350px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
@@ -213,20 +211,10 @@ export default function Home() {
               </motion.div>
             </AnimatePresence>
           </div>
-
-          <div className="flex justify-center gap-3 mt-10">
-            {reviews.map((_, i) => (
-              <button 
-                key={i} 
-                onClick={() => setCurrentReview(i)}
-                className={`w-3 h-3 rounded-full transition-all ${currentReview === i ? 'bg-white w-8' : 'bg-white/30'}`}
-              />
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Appointment & Contact */}
+      {/* Appointment & Contact (Updated Timings) */}
       <section id="contact" className="py-32 px-8">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start">
           <div className="space-y-12">
@@ -243,51 +231,13 @@ export default function Home() {
                 <div className="bg-blue-50 p-4 rounded-2xl text-blue-600 h-fit"><Clock size={28}/></div>
                 <div>
                   <h4 className="font-bold text-xl mb-2">Clinic Hours</h4>
-                  <p className="text-slate-500 text-lg font-medium">Tue – Sun: 10:00 AM – 8:00 PM</p>
-                  <p className="text-red-500 font-bold uppercase text-sm">Closed on Mondays</p>
+                  <p className="text-slate-500 text-lg font-medium">Monday – Sunday: 10:00 AM – 8:00 PM</p>
+                  <p className="text-teal-600 font-bold uppercase text-sm">Open 7 Days a Week</p>
                 </div>
               </div>
-            </div>
-            {/* Real Map Embed */}
-            <div className="rounded-[32px] overflow-hidden border-8 border-slate-50 h-80 shadow-inner">
-               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.784537651817!2d77.3773124!3d28.5762118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef67f10b779b%3A0xc3f982c40c88390e!2sPrateek%20Wisteria!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
-                width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
-               ></iframe>
             </div>
           </div>
 
           <motion.div 
             id="book"
             className="bg-white border border-slate-100 rounded-[40px] shadow-2xl p-8 md:p-12"
-          >
-            <h4 className="text-3xl font-bold mb-8">Book Your Visit</h4>
-            <div className="space-y-6">
-              <input className="bg-slate-50 border-none p-5 rounded-2xl w-full" placeholder="Full Name" />
-              <input className="bg-slate-50 border-none p-5 rounded-2xl w-full" placeholder="Phone Number" />
-              <select className="bg-slate-50 border-none p-5 rounded-2xl w-full bg-white">
-                <option>Treatment Needed</option>
-                <option>Root Canal</option>
-                <option>Teeth Whitening</option>
-                <option>General Checkup</option>
-              </select>
-              <button className="w-full bg-blue-600 text-white py-6 rounded-2xl font-black text-lg hover:bg-blue-700 transition">
-                Send Request
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Floating Buttons */}
-      <div className="fixed bottom-10 right-10 flex flex-col gap-4 z-50">
-        <a href="https://wa.me/918130354198" target="_blank" className="bg-green-500 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition">
-          <MessageCircle size={32} />
-        </a>
-        <a href="tel:+918130354198" className="bg-blue-600 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition">
-          <Phone size={32} />
-        </a>
-      </div>
-    </main>
-  );
-}
