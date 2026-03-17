@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Stethoscope, Syringe, Sparkles, Activity, ShieldCheck, 
+import {
+  Stethoscope, Syringe, Sparkles, Activity, ShieldCheck,
   Smile, Phone, MapPin, Clock, Award, CheckCircle2, MessageCircle, Navigation, ChevronRight, Star, Quote
 } from "lucide-react";
 
@@ -52,7 +52,7 @@ export default function Home() {
       {/* Navigation */}
       <header className="fixed w-full bg-white/80 backdrop-blur-xl shadow-sm z-50 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             className="text-2xl font-bold text-blue-600 tracking-tight"
           >
@@ -73,8 +73,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-40 pb-32 px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -88,24 +88,24 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               <a href="#book" className="bg-teal-600 text-white px-10 py-5 rounded-2xl font-bold shadow-xl shadow-teal-100 hover:bg-teal-700 transition flex items-center justify-center gap-2">
-                Book Appointment <ChevronRight size={20}/>
+                Book Appointment <ChevronRight size={20} />
               </a>
               <a href="https://maps.app.goo.gl/9uT2p8y6F5p8y6F5" target="_blank" className="bg-white text-slate-700 border border-slate-200 px-10 py-5 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center justify-center gap-2">
-                <Navigation size={20} className="text-blue-600"/> Get Directions
+                <Navigation size={20} className="text-blue-600" /> Get Directions
               </a>
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
             className="relative"
           >
             <div className="absolute -inset-4 bg-teal-100/50 rounded-[40px] blur-2xl -z-10 animate-pulse"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" 
-              alt="Modern Dental Office" 
+            <img
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800"
+              alt="Modern Dental Office"
               className="rounded-[32px] shadow-2xl border-8 border-white object-cover h-[500px] w-full"
             />
           </motion.div>
@@ -119,10 +119,10 @@ export default function Home() {
             <h3 className="text-4xl font-black text-slate-900 mb-6">World-Class Dental Services</h3>
             <p className="text-lg text-slate-500 max-w-2xl mx-auto">From preventive care to complex oral surgeries, we offer a full range of treatments in Noida.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((s, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -145,18 +145,18 @@ export default function Home() {
       <section id="about" className="py-32 px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="bg-slate-900 rounded-[48px] p-8 md:p-20 flex flex-col lg:flex-row items-center gap-20">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               className="lg:w-1/2"
             >
-              <img 
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800" 
-                alt="Dr. Renu Tanwar" 
+              <img
+                src="https://media.licdn.com/dms/image/v2/C5603AQGBo8pwKYf2cA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516887962243?e=2147483647&v=beta&t=kySKNwSXnGlzRiiBYB9eIEt8NjdaUVlWsrL4jMi5xCM"
+                alt="Dr. Renu Tanwar"
                 className="rounded-[40px] shadow-2xl h-[600px] w-full object-cover grayscale-[20%] hover:grayscale-0 transition duration-700"
               />
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               className="lg:w-1/2 text-white"
@@ -168,12 +168,12 @@ export default function Home() {
                 With over 21 years of experience, Dr. Tanwar is renowned for her precision in complex root canals and aesthetic smile makeovers. She specializes in MDS - Conservative Dentistry & Endodontics.
               </p>
               <div className="grid grid-cols-2 gap-6">
-                 {['Painless RCT', 'Smile Design', '21+ Years Exp', 'Sterile Clinic'].map((tag, idx) => (
-                   <div key={idx} className="flex items-center gap-3 text-slate-300 bg-white/5 p-4 rounded-2xl">
-                     <CheckCircle2 className="text-teal-400" size={20}/>
-                     <span className="font-semibold">{tag}</span>
-                   </div>
-                 ))}
+                {['Painless RCT', 'Smile Design', '21+ Years Exp', 'Sterile Clinic'].map((tag, idx) => (
+                  <div key={idx} className="flex items-center gap-3 text-slate-300 bg-white/5 p-4 rounded-2xl">
+                    <CheckCircle2 className="text-teal-400" size={20} />
+                    <span className="font-semibold">{tag}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -221,24 +221,24 @@ export default function Home() {
             <h3 className="text-5xl font-black text-slate-900">Get in Touch</h3>
             <div className="space-y-8">
               <div className="flex gap-6">
-                <div className="bg-blue-50 p-4 rounded-2xl text-blue-600 h-fit"><MapPin size={28}/></div>
+                <div className="bg-blue-50 p-4 rounded-2xl text-blue-600 h-fit"><MapPin size={28} /></div>
                 <div>
                   <h4 className="font-bold text-xl mb-2">Our Location</h4>
                   <p className="text-slate-500 text-lg">T-804, Prateek Wisteria, Sector 77, Noida, UP</p>
                 </div>
               </div>
               <div className="flex gap-6">
-                <div className="bg-blue-50 p-4 rounded-2xl text-blue-600 h-fit"><Clock size={28}/></div>
+                <div className="bg-blue-50 p-4 rounded-2xl text-blue-600 h-fit"><Clock size={28} /></div>
                 <div>
                   <h4 className="font-bold text-xl mb-2">Clinic Hours</h4>
-<p className="text-slate-500 text-lg font-medium">Monday – Sunday: 10:00 AM – 8:00 PM</p>
-<p className="text-teal-600 font-bold uppercase text-sm">Open 7 Days a Week</p>
+                  <p className="text-slate-500 text-lg font-medium">Monday – Sunday: 10:00 AM – 8:00 PM</p>
+                  <p className="text-teal-600 font-bold uppercase text-sm">Open 7 Days a Week</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <motion.div 
+          <motion.div
             id="book"
             className="bg-white border border-slate-100 rounded-[40px] shadow-2xl p-8 md:p-12"
           >
@@ -265,4 +265,3 @@ export default function Home() {
       </div>
     </main>
   );
-}
