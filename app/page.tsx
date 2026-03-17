@@ -60,7 +60,11 @@ export default function Home() {
             </div>
           </div>
           <div className="relative">
-            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Clinic" className="rounded-[32px] shadow-2xl border-8 border-white object-cover h-[500px] w-full"/>
+            <img 
+  src="https://raw.githubusercontent.com/get-pantry/pantry-main/main/dr-renu-tanwar.png" 
+  alt="Dr. Renu Tanwar" 
+  className="rounded-[40px] shadow-2xl h-[600px] w-full object-cover grayscale-[20%] hover:grayscale-0 transition duration-700"
+/>
           </div>
         </div>
       </section>

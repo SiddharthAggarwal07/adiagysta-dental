@@ -14,10 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Adiagstya Dental | Dr. Renu Tanwar",
-  description: "Advanced Dental Care and Painless Root Canal Treatment in Sector 77, Noida.",
-  icons: {
-    icon: "/favicon.ico", // This is the small icon next to the text
-  },
+  description: "Advanced Dental Care and Painless RCT in Sector 77, Noida.",
 };
 
 export default function RootLayout({
