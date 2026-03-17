@@ -241,3 +241,28 @@ export default function Home() {
           <motion.div 
             id="book"
             className="bg-white border border-slate-100 rounded-[40px] shadow-2xl p-8 md:p-12"
+          >
+            <h4 className="text-3xl font-bold mb-8">Book Your Visit</h4>
+            <div className="space-y-6">
+              <input className="bg-slate-50 border-none p-5 rounded-2xl w-full" placeholder="Full Name" />
+              <input className="bg-slate-50 border-none p-5 rounded-2xl w-full" placeholder="Phone Number" />
+              <button className="w-full bg-blue-600 text-white py-6 rounded-2xl font-black text-lg hover:bg-blue-700 transition">
+                Send Request
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Floating Buttons */}
+      <div className="fixed bottom-10 right-10 flex flex-col gap-4 z-50">
+        <a href="https://wa.me/918130354198" target="_blank" className="bg-green-500 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition">
+          <MessageCircle size={32} />
+        </a>
+        <a href="tel:+918130354198" className="bg-blue-600 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition">
+          <Phone size={32} />
+        </a>
+      </div>
+    </main>
+  );
+}
